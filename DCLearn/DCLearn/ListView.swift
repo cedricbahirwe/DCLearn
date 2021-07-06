@@ -10,8 +10,8 @@ import SwiftUI
 struct ListView: View {
     let options: [ListOption]
     @Binding var currentSelection: ListSelection
-    
     @Namespace private var animation
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ForEach(options) { option in
@@ -72,9 +72,3 @@ struct ListView: View {
         }
     }
 }
-
-//struct ListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListView()
-//    }
-//}

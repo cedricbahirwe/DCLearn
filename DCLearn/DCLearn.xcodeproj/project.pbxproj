@@ -17,6 +17,7 @@
 		824B0A312694EDE60087EF98 /* DCLearn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 824B0A2F2694EDE60087EF98 /* DCLearn.xcdatamodeld */; };
 		824B0A3D2694EDE60087EF98 /* DCLearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B0A3C2694EDE60087EF98 /* DCLearnTests.swift */; };
 		824B0A482694EDE70087EF98 /* DCLearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B0A472694EDE70087EF98 /* DCLearnUITests.swift */; };
+		82E9AFBF2695080B005CC4CE /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9AFBE2695080B005CC4CE /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		824B0A432694EDE70087EF98 /* DCLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		824B0A472694EDE70087EF98 /* DCLearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCLearnUITests.swift; sourceTree = "<group>"; };
 		824B0A492694EDE70087EF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E9AFBE2695080B005CC4CE /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				824B0A262694EDE50087EF98 /* ContentView.swift */,
 				820ABA0A2694FB0300689BCC /* ListView.swift */,
 				820ABA0F2694FB1000689BCC /* MainView.swift */,
+				82E9AFBE2695080B005CC4CE /* VideoModel.swift */,
 				824B0A282694EDE60087EF98 /* Assets.xcassets */,
 				824B0A2D2694EDE60087EF98 /* Persistence.swift */,
 				824B0A322694EDE60087EF98 /* Info.plist */,
@@ -276,6 +279,7 @@
 				824B0A2E2694EDE60087EF98 /* Persistence.swift in Sources */,
 				820ABA102694FB1000689BCC /* MainView.swift in Sources */,
 				824B0A312694EDE60087EF98 /* DCLearn.xcdatamodeld in Sources */,
+				82E9AFBF2695080B005CC4CE /* VideoModel.swift in Sources */,
 				820ABA0B2694FB0300689BCC /* ListView.swift in Sources */,
 				824B0A272694EDE50087EF98 /* ContentView.swift in Sources */,
 				824B0A252694EDE50087EF98 /* DCLearnApp.swift in Sources */,
