@@ -7,25 +7,35 @@
 
 import SwiftUI
 
+
+enum ListSelection { case  home, downloads, contact, settings, about }
 struct ListOption: Identifiable {
     let id = UUID()
     let image: String
     let title: String
+    let type: ListSelection
 }
 struct ContentView: View {
     
     private let listOptions: [ListOption]  = [
-        .init(image: "house", title: "Home"),
-        .init(image: "arrow.down.app", title: "Downloaded"),
-        .init(image: "phone.circle", title: "Contact"),
-        .init(image: "gear", title: "Settings"),
-        .init(image: "info.circle", title: "About")
+        .init(image: "house", title: "Home", type: .home),
+        .init(image: "arrow.down.app", title: "Downloaded", type: .downloads),
+        .init(image: "phone.circle", title: "Contact", type: .contact),
+        .init(image: "gear", title: "Settings", type: .settings),
+        .init(image: "info.circle", title: "About", type: .about)
     ]
+    
+    @State private var currentOption: ListSelection = .home
     var body: some View {
         NavigationView {
-            ListView(options: listOptions)
+            ListView(options: listOptions, currentSelection: $currentOption)
             
-            MainView()
+            switch currentOption {
+            case .home:
+                MainView()
+            default:
+                Text("About other studds")
+            }
         }
         .frame(minWidth: 600, minHeight: 400)
     }
@@ -50,10 +60,19 @@ struct MainView: View {
                 .aspectRatio(contentMode: .fit)
             
             LazyVGrid(columns: columns) {
-//                ForEac
+                ForEach(videoThumbnails) { item in
+                    VStack {
+                    Image(item.image)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        Text(item.title)
+                            .bold()
+                    }
+                }
                 
             }
-            Spacer()
+//            Spacer()
         }
     }
 }
@@ -73,9 +92,9 @@ struct Video: Identifiable {
         .init(title: "Front-End", image: "reactjs"),
         .init(title: "Flutter", image: "flutter"),
         .init(title: "ML Js", image: "mljs"),
-        .init(title: "Node Js", image: "nodejs"),
+//        .init(title: "Node Js", image: "nodejs"),
         .init(title: "Swift", image: "swift"),
-        .init(title: "Web Dev", image: "web")
+//        .init(title: "Web Dev", image: "web")
         
         
     ]

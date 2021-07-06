@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ListView: View {
     let options: [ListOption]
+    @Binding var currentSelection: ListSelection
+    
+    @Namespace private var animation
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ForEach(options) { option in
@@ -20,8 +23,26 @@ struct ListView: View {
                     Text(option.title)
                     Spacer()
                 }
-                .padding([.vertical, .trailing], 8)
-                .padding(.leading, 20)
+                .padding(8)
+                .background(
+                    ZStack {
+                        
+                        if option.type != currentSelection {
+                            Color.clear
+                        } else {
+                            Color(.selectedContentBackgroundColor)
+                                .matchedGeometryEffect(id: "background", in: animation)
+                        }
+                    }
+                )
+                .cornerRadius(5)
+                .padding(.horizontal, 20)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        currentSelection = option.type
+                    }
+                }
             }
             Spacer()
             
