@@ -38,53 +38,45 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct ListView: View {
-    let options: [ListOption]
+struct MainView: View {
+    let columns: [GridItem] = [
+        .init(.flexible()), .init(.flexible()), .init(.flexible())
+    ]
+    let videoThumbnails = Video.samples
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(options) { option in
-                HStack(spacing: 15) {
-                    Image(systemName: option.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 16)
-                    Text(option.title)
-                    Spacer()
-                }
-                .padding([.vertical, .trailing], 8)
-                .padding(.leading, 20)
+        VStack {
+            Image("header")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            LazyVGrid(columns: columns) {
+//                ForEac
+                
             }
             Spacer()
-            
-            Divider()
-            HStack {
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 35, height: 35)
-                    .background(Color.secondary.opacity(0.5))
-                    .clipShape(Circle())
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("John Doe")
-                        .fontWeight(.semibold)
-                    Button(action: {}) {
-                        HStack(spacing:2) {
-                            Text("View profile")
-                            Image(systemName: "chevron.right")
-                        }
-                        .font(.caption)
-                        .foregroundColor(.accentColor)
-                    }
-                    .buttonStyle(BorderlessButtonStyle())
-                }
-            }
-            .padding(.vertical, 10)
-            .padding(.leading, 20)
         }
     }
 }
 
-struct MainView: View {
-    var body: some View {
-        Text("")
-    }
+
+struct Video: Identifiable {
+    let id = UUID()
+    let title: String
+    let description: String? = nil
+    let rating: Double = 0.0
+    let image: String
+    
+    
+    static let samples: [Video]  = [
+        .init(title: "SwiftUI", image: "swiftui"),
+        .init(title: "Kotlin", image: "kotlin"),
+        .init(title: "Front-End", image: "reactjs"),
+        .init(title: "Flutter", image: "flutter"),
+        .init(title: "ML Js", image: "mljs"),
+        .init(title: "Node Js", image: "nodejs"),
+        .init(title: "Swift", image: "swift"),
+        .init(title: "Web Dev", image: "web")
+        
+        
+    ]
 }

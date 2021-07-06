@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820ABA0B2694FB0300689BCC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820ABA0A2694FB0300689BCC /* ListView.swift */; };
+		820ABA102694FB1000689BCC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820ABA0F2694FB1000689BCC /* MainView.swift */; };
 		824B0A252694EDE50087EF98 /* DCLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B0A242694EDE50087EF98 /* DCLearnApp.swift */; };
 		824B0A272694EDE50087EF98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B0A262694EDE50087EF98 /* ContentView.swift */; };
 		824B0A292694EDE60087EF98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824B0A282694EDE60087EF98 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820ABA0A2694FB0300689BCC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		820ABA0F2694FB1000689BCC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		824B0A212694EDE50087EF98 /* DCLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824B0A242694EDE50087EF98 /* DCLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCLearnApp.swift; sourceTree = "<group>"; };
 		824B0A262694EDE50087EF98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				824B0A242694EDE50087EF98 /* DCLearnApp.swift */,
 				824B0A262694EDE50087EF98 /* ContentView.swift */,
+				820ABA0A2694FB0300689BCC /* ListView.swift */,
+				820ABA0F2694FB1000689BCC /* MainView.swift */,
 				824B0A282694EDE60087EF98 /* Assets.xcassets */,
 				824B0A2D2694EDE60087EF98 /* Persistence.swift */,
 				824B0A322694EDE60087EF98 /* Info.plist */,
@@ -268,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				824B0A2E2694EDE60087EF98 /* Persistence.swift in Sources */,
+				820ABA102694FB1000689BCC /* MainView.swift in Sources */,
 				824B0A312694EDE60087EF98 /* DCLearn.xcdatamodeld in Sources */,
+				820ABA0B2694FB0300689BCC /* ListView.swift in Sources */,
 				824B0A272694EDE50087EF98 /* ContentView.swift in Sources */,
 				824B0A252694EDE50087EF98 /* DCLearnApp.swift in Sources */,
 			);
